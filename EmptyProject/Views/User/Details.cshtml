@@ -1,0 +1,90 @@
+﻿@model EmptyProject.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Inst_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inst_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inst_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inst_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inst_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inst_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegisterAs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegisterAs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Passw)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Passw)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.User_Id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

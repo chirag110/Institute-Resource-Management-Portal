@@ -1,0 +1,64 @@
+﻿@model List<EmptyProject.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Email
+        </th>
+        <th>
+            First_Name
+        </th>
+        <th>
+            Last_Name
+        </th>
+        <th>
+            Mobile
+        </th>
+
+        <th>
+            Password
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User_Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Passw)
+            </td>
+            @if ((int)item.RegisterAs == 2)
+            {
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.User_Id }) |
+
+                    @Html.ActionLink("Details", "Details", new { id = item.User_Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.User_Id })
+                </td>
+            }
+        </tr>
+    }
+
+</table>
